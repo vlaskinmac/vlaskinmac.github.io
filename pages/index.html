@@ -14,8 +14,9 @@
   <body>
 
 <div class="container">
-      <div class="row">
-          <nav>
+      <div class="row px-md-5">
+
+          <nav aria-label="Page navigation" class = "mt-4">
             {% if current_page == 1 %}
                   <ul class="pagination">
                     <li class="page-item active"><a class="page-link" href="index{{current_page}}.html">{{current_page}}</a></li>
@@ -118,7 +119,7 @@
           </nav>
             {% for books in books_divided %}
               {% for book in books %}
-              <div class="col-6">
+              <div class="col-6 px-md-0">
                 <div class="container">
                   <div class="row">
                       <div class="card mb-3" style="max-width: 540px;">
