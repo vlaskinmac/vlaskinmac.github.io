@@ -12,8 +12,8 @@ def rebuild():
     template = env.get_template('pages/index.html')
     with open('filejson.json') as json_file:
         book_collection = json.load(json_file)
-    books = 10
-    pages = list(chunked(book_collection, books))
+    books_on_page = 10
+    pages = list(chunked(book_collection, books_on_page))
     os.makedirs('pages', exist_ok=True)
     for number, page in enumerate(pages, 1):
         books_divided = list(chunked(page, 2))
